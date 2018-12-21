@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../integrated_rl/globals/globals_calendar_api.js"></script>
+    <script type="text/javascript" src="../integrated_rl/calendar_api_connection/calendar_api_sign_in.js"></script>
+    <script type="text/javascript" src="../integrated_rl/generate_legs/determine_legs.js"></script>
+    <script async
+            defer
+            onload="this.onload=function(){};handleClientLoad();"
+            onreadystatechange="if (this.readyState === 'complete') {this.onload();}"
+            src="https://apis.google.com/js/api.js">
+    </script>
+
+    <script src="../reisangebote/initAPIs/initAPIs.js"></script>
+
+    <script src="../reisangebote/places_adapter/places_adapter.js"></script>
+    <script src="../reisangebote/directions_adapter/directions_adapter.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjEnwFyOFVJjAd3Mpj97F6iVd4L3_yRMo&libraries=places"></script>
+
+    <script src="../reisangebote/trips/Trip.js"></script>
+    <script src="../reisangebote/trips/trip_possibilities/Fussweg.js"></script>
+    <script src="../reisangebote/trips/trip_possibilities/Bahn.js"></script>
+    <script src="../reisangebote/trips/trip_possibilities/Privatwagen.js"></script>
+    <script src="../reisangebote/trips/CombinedTrip.js"></script>
+    <script src="../reisangebote/trips/TripSelections.js"></script>
+
+    <script src="../reisangebote/controller.js"></script>
+
+    <script type = "text/javascript" src ="kombinierer.js"></script>
+</head>
+<body>
+
+<button id = "firstTrip">First Trip</button>
+<button id = "secondTrip">Second Trip</button>
+
+<div id="map"></div>
+<div id = "travelPossibilities"></div>
+
+<form id = "muster" style = "display: none">
+    <label for = "first">First Possibility</label>
+    <input id = "first" type = "radio" name = "possibility"/>
+    <label for = "second">First Possibility</label>
+    <input id = "second" type = "radio" name = "possibility"/>
+    <label for = "third">First Possibility</label>
+    <input id = "third" type = "radio" name = "possibility"/>
+</form>
+
+<div id = "combined_muster" style = "display:none">
+    <table width = "100%"><tr>
+    <td width = "33%"><select class = "first_step">
+        <option value="fussweg">Zu Fuß</option>
+        <option value="car">Car</option>
+    </select></td>
+    <td width = "33%"><div class = "fixed_mid_travel">
+
+    </div></td>
+    <td width = "33%"><select class = "last_step">
+        <option value="fussweg">Zu Fuß</option>
+        <option value="car">Car</option>
+    </select></td>
+    </tr></table>
+</div>
+
+</body>
+</html>

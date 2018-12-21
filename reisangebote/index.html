@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="import_adapter/mock_query.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="initAPIs/initAPIs.js"></script>
+
+    <script src="places_adapter/places_adapter.js"></script>
+    <script src="directions_adapter/directions_adapter.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjEnwFyOFVJjAd3Mpj97F6iVd4L3_yRMo&libraries=places"></script>
+
+    <script src="trips/Trip.js"></script>
+    <script src="trips/trip_possibilities/Fussweg.js"></script>
+    <script src="trips/trip_possibilities/Bahn.js"></script>
+    <script src="trips/trip_possibilities/Privatwagen.js"></script>
+    <script src="trips/CombinedTrip.js"></script>
+    <script src="trips/TripSelections.js"></script>
+
+    <script src="controller.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            initPlaceService().then(function () {
+                getMockData(generateTravelSolutions);
+            });
+        });
+    </script>
+</head>
+<body>
+<p>hi</p>
+<div id="map"></div>
+</body>
+</html>

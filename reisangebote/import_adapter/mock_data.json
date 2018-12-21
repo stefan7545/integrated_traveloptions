@@ -1,0 +1,13 @@
+{
+  "legId": 0,
+  "origin": {
+    "place": "Jahnstraße 7, Holzkirchen, BY",
+    "dateTime": "2018-12-17T08:00:00+01:00",
+    "dynamisierung": ""
+  },
+  "destination": {
+    "place": "Mainzer Landstraße 201, Frankfurt am Main, HE",
+    "dateTime": "2018-12-18T00:30:00+01:00",
+    "dynamisierung": ""
+  }
+}
